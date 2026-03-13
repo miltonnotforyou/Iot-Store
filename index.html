@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOT STORE - Tecnologia de Ponta</title>
+    
+    <!-- Material Symbols (Biblioteca de Ícones do Google) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Arquivo de Estilos CSS Puro -->
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <!-- Container principal que envolve todo o site -->
+    <div class="site-container">
+      
+      <!-- Cabeçalho do site -->
+      <header>
+        <div class="caixa-conteudo cabecalho-conteudo">
+          <!-- Logotipo com link para a home -->
+          <a href="/" class="logotipo">
+            <div class="logotipo-icone">
+              <span class="material-symbols-outlined">memory</span>
+            </div>
+            <h1 class="logotipo-texto">IOT STORE</h1>
+          </a>
+          
+          <!-- Barra de pesquisa de produtos -->
+          <div class="barra-pesquisa">
+            <span class="material-symbols-outlined icone-pesquisa">search</span>
+            <input type="text" placeholder="Pesquisar dispositivos inteligentes..." />
+          </div>
+
+          <!-- Ações do usuário (perfil, favoritos, carrinho) -->
+          <div class="cabecalho-acoes">
+            <button class="botao-icone">
+              <span class="material-symbols-outlined">person</span>
+            </button>
+            <button class="botao-icone">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button class="botao-carrinho">
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span class="contador-carrinho">2</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Seção de Destaque Principal (Hero) -->
+        <section class="destaque-principal">
+          <div class="caixa-conteudo">
+            <div class="cartao-destaque">
+              <!-- Imagem de fundo do destaque -->
+              <div class="fundo-destaque" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAibLhJlNJZd-H8edaLNbcklIcgG86qeOJBez7TX-GWyPlLJrICV3sgN_3Ryah9lqBqzJkw_KN7JI-4e2JFApmnmRjy_4ghlkyOzW8BWDhg2ejYeuC0AvmnrhJjfc0ERUha8DjYmTrSO13TdJwfiY28J_DUqmeFqcG9djSA3wmrRsJK-NVUANoSvWWi0VVgFRggC7iRKjXNIj7lrUlfTuAcWyGaJo4w6RBY8GaukKlcmg5L3iJlAUR87Bl5gnqKAtF8XcT8botl6ZbK')"></div>
+              <!-- Camada de gradiente para melhorar a leitura do texto -->
+              <div class="camada-destaque"></div>
+              
+              <div class="conteudo-destaque">
+                <span class="etiqueta-destaque">Tecnologia do Futuro</span>
+                <h2 class="titulo-destaque">Transforme sua Casa com Tecnologia de Ponta</h2>
+                <p class="descricao-destaque">Descubra o futuro da automação residencial com nossa curadoria exclusiva de dispositivos inteligentes.</p>
+                <div class="botoes-destaque">
+                  <button class="botao-primario">
+                    Ver Coleção <span class="material-symbols-outlined">arrow_forward</span>
+                  </button>
+                  <button class="botao-contorno">Ofertas do Dia</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção de Produtos em Destaque -->
+        <section class="produtos-destaque">
+          <div class="caixa-conteudo">
+            <div class="cabecalho-secao">
+              <div class="titulo-secao">
+                <h3>Destaques</h3>
+                <p>Os dispositivos mais desejados da temporada</p>
+              </div>
+              <a href="#" class="ver-todos">
+                Ver todos <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+
+            <!-- Grade de exibição dos produtos -->
+            <div class="grade-produtos">
+              <!-- Produto 1 -->
+              <div class="cartao-produto">
+                <div class="imagem-produto">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd8Qc4Y5Lb5B-sY_Q4NheQLn4yzIZOqf_V7JAw6fSSfu4WMu6AR3sCQhisQAhbzrnWIjLNOUIc7YT1VRBx1DQWVEXGWQVSFj0wmbVDoByD2oVtnBA1dHM3WyJbxqUF_qpjJ5U_wqXsUIf9Kg9SJQt9KOIwiMzwosvoPTp2jnQ13H_YJAVO1KOEIBOwFq5tBfqrk3sQPnK7bsSxqrDMrejZSgSsKnxOv_EkFB9LacAf_DtoLcJ6ZA_2Q40ouo2ywRPrqrHCe8cl7XEx" alt="Raspberry Pi 4" referrerpolicy="no-referrer" />
+                  <span class="selo">BEST SELLER</span>
+                </div>
+                <h4 class="nome-produto">Raspberry Pi 4</h4>
+                <p class="descricao-produto">8GB RAM - Versão Oficial</p>
+                <div class="rodape-produto">
+                  <span class="preco-produto">R$ 499,00</span>
+                  <button class="botao-adicionar-carrinho">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Produto 2 -->
+              <div class="cartao-produto">
+                <div class="imagem-produto">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkNEFJK02QBmrs7wbZndEejKRxYouAqTZ1Mga7gEUWhwNAeoifkNeVWB4KknrciTvh0xMxkvpVa4pqN4j_Nspli-j6vEg9djoBIdi9-nSN4cacflZA7yejEna2wkroF7xneKHNpKE81-gpch9xlGf2c5LLriGT_sY2pE_E-792qz9ASo9VF4MMSDxkNCL2QdhUjb1ORPl2IkLuRXv-aTmOdQ4aWfYU-1umTkJ703ufxMN1JbctZuBMzVGRc5zB_dkaJpsWCGJ5Mwc" alt="Câmera Inteligente 4K" referrerpolicy="no-referrer" />
+                </div>
+                <h4 class="nome-produto">Câmera Inteligente 4K</h4>
+                <p class="descricao-produto">Visão Noturna & IA</p>
+                <div class="rodape-produto">
+                  <span class="preco-produto">R$ 299,00</span>
+                  <button class="botao-adicionar-carrinho">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Produto 3 -->
+              <div class="cartao-produto">
+                <div class="imagem-produto">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvoTw29DMnJ3dl73nhsIp99-Tdql0Txwi65EQLx3cV2Uk31-HntmBvmDgQCgBMTsN54SIvVFW5aOtySWuJuCLu52VlYuF36zqQcOZWCtXe7GFYEwPAXDfCF7xbXpp_9ZuVqB046bmbk7ncDZ9i3D1Jad26wqAE2WSoRMJGt-XRepRuNOGu_65dvdzgnUY2HABVQL75shjY6_7pGr9KTzZ9y95nBa6Le0Oc01DKfetqXuMr0wqmoFBP0qQIEY3wREa-9ulOKkovgTL0" alt="Smart Speaker Pro" referrerpolicy="no-referrer" />
+                </div>
+                <h4 class="nome-produto">Smart Speaker Pro</h4>
+                <p class="descricao-produto">Audio HD & Siri/Alexa</p>
+                <div class="rodape-produto">
+                  <span class="preco-produto">R$ 899,00</span>
+                  <button class="botao-adicionar-carrinho">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Produto 4 -->
+              <div class="cartao-produto">
+                <div class="imagem-produto">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7FPzo-tHnWjcxkJ-KzXASXNjwG-3SGTC6uztGh21ZgD4kXYTojx0cshIFnYgtgV_vv9lgmOqP5YGggmMlsEkkHIj4GibeTb-xv5yHATVbA7Uvzs34NTsq04hrD7tVPARf0rejld2T7vIc9LJiVnse-lLhiNTi0aB114m-OGzj758I0vPIlkrK9u_Y0MZMK9RTIaQpFdE4Peb56liF4fdAPXqjldg3fVJqbb3b5S_5P4Xz2u5EqkE9pQIuOT8ugH47PLmIUoDtKFkN" alt="Termostato Smart" referrerpolicy="no-referrer" />
+                </div>
+                <h4 class="nome-produto">Termostato Smart</h4>
+                <p class="descricao-produto">Controle de Clima Wi-Fi</p>
+                <div class="rodape-produto">
+                  <span class="preco-produto">R$ 649,00</span>
+                  <button class="botao-adicionar-carrinho">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Banner Promocional com Cupom -->
+        <section class="promocao">
+          <div class="caixa-conteudo">
+            <div class="banner-promocional">
+              <div class="texto-promocional">
+                <h2>PROMOÇÃO: 5% OFF</h2>
+                <p>Em sua primeira compra de dispositivos IoT. Use o cupom abaixo:</p>
+                <div class="caixa-cupom">
+                  <span class="codigo-cupom">IOT5</span>
+                  <button class="botao-cupom">COPIAR</button>
+                </div>
+              </div>
+              <div class="acao-promocional">
+                <button class="botao-grande">Aproveitar Agora</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção Institucional: Nossa Missão -->
+        <section class="nossa-missao">
+          <div class="caixa-conteudo conteudo-missao">
+            <div class="moldura-imagem-missao">
+              <div class="fundo-imagem-missao"></div>
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Q50wfh31Fv3tBq7QA8JsOzsxRarXhm2qobuXmSP1Keo4BpG7X7cenhC9ZIY5Q2mAOZUDF3QOfSODzpQ7sdxtbMaJm0LIJj3UEFiLR0yn1QEi_ks8SnwUhN6kVyJ9I00Es7dcvc5eUEBfHLBnXW9BC8WLf4puChtBua-6SkcEHSP6C6O5pcAlib7HM2IfvaeGs2jV_cbbC71t_CujAFs54oAd-zmI1JdG3O28fgYrgSQ5csnQlee6qa7N0pM3uB_ttTlArpevjUCv" alt="Nossa Missão" referrerpolicy="no-referrer" class="imagem-missao" />
+            </div>
+            <div class="texto-missao">
+              <div class="etiqueta-missao"><span></span> Nossa Missão</div>
+              <h2>Liderando a Inovação no seu Dia a Dia</h2>
+              <p>Na IoT STORE, não apenas vendemos gadgets; nós projetamos experiências. Nossa curadoria é focada em trazer a inteligência das coisas para a palma da sua mão, tornando sua rotina mais eficiente, segura e conectada.</p>
+              <div class="estatisticas-missao">
+                <div class="item-estatistica">
+                  <span>10k+</span>
+                  <p>Produtos Vendidos</p>
+                </div>
+                <div class="item-estatistica">
+                  <span>24h</span>
+                  <p>Suporte Técnico</p>
+                </div>
+              </div>
+              <a href="#" class="saiba-mais">
+                Saiba mais sobre nós <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Rodapé do site -->
+      <footer>
+        <div class="caixa-conteudo">
+          <div class="grade-rodape">
+            <!-- Informações da marca e redes sociais -->
+            <div class="informacao-rodape">
+              <a href="/" class="logotipo-rodape">
+                <div class="logotipo-rodape-icone">
+                  <span class="material-symbols-outlined">memory</span>
+                </div>
+                <h2 class="logotipo-texto">IOT STORE</h2>
+              </a>
+              <p class="descricao-rodape">Sua parceira premium em automação e tecnologia inteligente para casa e negócios.</p>
+              <div class="links-sociais">
+                <a href="#" class="botao-social"><span class="material-symbols-outlined">public</span></a>
+                <a href="#" class="botao-social"><span class="material-symbols-outlined">groups</span></a>
+                <a href="#" class="botao-social"><span class="material-symbols-outlined">chat</span></a>
+              </div>
+            </div>
+
+            <!-- Colunas de links institucionais -->
+            <div class="coluna-rodape">
+              <h4>Institucional</h4>
+              <ul>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+                <li><a href="#">Blog Tech</a></li>
+              </ul>
+            </div>
+
+            <div class="coluna-rodape">
+              <h4>Informações</h4>
+              <ul>
+                <li><a href="#">Política de Entrega</a></li>
+                <li><a href="#">Privacidade e Segurança</a></li>
+                <li><a href="#">Trocas e Devoluções</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+
+            <!-- Informações de contato -->
+            <div class="coluna-rodape">
+              <h4>Contato</h4>
+              <ul class="lista-contato">
+                <li><span class="material-symbols-outlined">phone</span> (11) 4002-8922</li>
+                <li><span class="material-symbols-outlined">mail</span> contato@iotstore.com.br</li>
+                <li><span class="material-symbols-outlined">schedule</span> Seg - Sex: 09h às 18h</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Parte inferior do rodapé com selos e direitos autorais -->
+          <div class="rodape-inferior">
+            <div class="item-rodape-inferior">
+              <span>Pagamento</span>
+              <div class="icones-pagamento">
+                <div class="selo-pagamento">VISA</div>
+                <div class="selo-pagamento">MASTERCARD</div>
+                <div class="selo-pagamento">PIX</div>
+              </div>
+            </div>
+            <div class="item-rodape-inferior">
+              <span>Segurança</span>
+              <div class="icones-seguranca">
+                <span class="material-symbols-outlined" style="color: #10b981;">shield</span>
+                <span class="material-symbols-outlined" style="color: #3b82f6;">verified</span>
+              </div>
+            </div>
+            <p class="direitos-autorais">© 2024 IOT STORE. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Arquivo de Lógica JavaScript -->
+    <script src="/src/script.js"></script>
+  </body>
+</html>

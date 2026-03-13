@@ -1,0 +1,764 @@
+/* 
+   ARQUIVO DE ESTILOS - IOT STORE
+   Este arquivo contém todo o design visual do site.
+   Organizado por seções para facilitar a leitura.
+*/
+
+/* Importação da fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset básico para garantir que o site apareça igual em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores e configurações globais */
+:root {
+    --primaria: #2b3d4f;
+    --fundo-claro: #f6f7f7;
+    --texto-escuro: #0f172a;
+    --texto-suave: #64748b;
+    --branco: #ffffff;
+    --borda: #e2e8f0;
+    --sombra: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fundo-claro);
+    color: var(--texto-escuro);
+    line-height: 1.5;
+}
+
+/* Classe utilitária para centralizar o conteúdo e limitar a largura */
+.caixa-conteudo {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--borda);
+    padding: 15px 0;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primaria);
+}
+
+.logotipo-icone {
+    background-color: var(--primaria);
+    color: var(--branco);
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.logotipo-texto {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.barra-pesquisa {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Esconde a barra de pesquisa em telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .barra-pesquisa {
+        display: none;
+    }
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 15px 12px 45px;
+    font-size: 0.875rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.barra-pesquisa input:focus {
+    background-color: var(--branco);
+    box-shadow: 0 0 0 2px rgba(43, 61, 79, 0.1);
+}
+
+.icone-pesquisa {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--texto-suave);
+}
+
+.cabecalho-acoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.botao-icone {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--primaria);
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+}
+
+.botao-icone:hover {
+    background-color: #f1f5f9;
+}
+
+.botao-carrinho {
+    background-color: var(--primaria);
+    color: var(--branco);
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    box-shadow: 0 10px 15px -3px rgba(43, 61, 79, 0.2);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+}
+
+.botao-carrinho:hover {
+    box-shadow: 0 20px 25px -5px rgba(43, 61, 79, 0.3);
+}
+
+.contador-carrinho {
+    background-color: var(--branco);
+    color: var(--primaria);
+    font-size: 0.75rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- SEÇÃO DE DESTAQUE (HERO) --- */
+.destaque-principal {
+    padding: 30px 0;
+}
+
+.cartao-destaque {
+    position: relative;
+    min-height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: var(--primaria);
+    display: flex;
+    align-items: center;
+}
+
+.fundo-destaque {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s;
+}
+
+.cartao-destaque:hover .fundo-destaque {
+    transform: scale(1.05);
+}
+
+.camada-destaque {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(43, 61, 79, 0.9), rgba(43, 61, 79, 0.4), transparent);
+}
+
+.conteudo-destaque {
+    position: relative;
+    padding: 60px;
+    max-width: 700px;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.etiqueta-destaque {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo-destaque {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+    .titulo-destaque {
+        font-size: 2.5rem;
+    }
+    .conteudo-destaque {
+        padding: 40px 20px;
+    }
+}
+
+.descricao-destaque {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+}
+
+.botoes-destaque {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao-primario {
+    background-color: var(--branco);
+    color: var(--primaria);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.botao-primario:hover {
+    background-color: #f1f5f9;
+}
+
+.botao-contorno {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--branco);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+}
+
+.botao-contorno:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- SEÇÕES GERAIS --- */
+section {
+    padding: 60px 0;
+}
+
+.cabecalho-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h3 {
+    font-size: 1.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+}
+
+.titulo-secao p {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+}
+
+.ver-todos {
+    color: var(--primaria);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ver-todos:hover {
+    text-decoration: underline;
+}
+
+/* --- GRADE DE PRODUTOS --- */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.cartao-produto {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--borda);
+    transition: all 0.3s;
+}
+
+.cartao-produto:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.imagem-produto {
+    background-color: #f8fafc;
+    border-radius: 15px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.cartao-produto:hover .imagem-produto img {
+    transform: scale(1.1);
+}
+
+.selo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primaria);
+    color: var(--branco);
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.nome-produto {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--primaria);
+    margin-bottom: 5px;
+}
+
+.descricao-produto {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+}
+
+.rodape-produto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preco-produto {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--primaria);
+}
+
+.botao-adicionar-carrinho {
+    background-color: #f1f5f9;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: var(--primaria);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+}
+
+.botao-adicionar-carrinho:hover {
+    background-color: var(--primaria);
+    color: var(--branco);
+}
+
+/* --- BANNER PROMOCIONAL --- */
+.banner-promocional {
+    background-color: #e2e8f0;
+    border: 2px solid #cbd5e1;
+    border-radius: 30px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .banner-promocional {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
+
+.texto-promocional h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primaria);
+    text-transform: uppercase;
+}
+
+.texto-promocional p {
+    color: var(--texto-suave);
+    font-size: 1.125rem;
+    margin-bottom: 25px;
+}
+
+.caixa-cupom {
+    display: inline-flex;
+    background-color: var(--branco);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+.codigo-cupom {
+    padding: 0 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    border-right: 1px solid var(--borda);
+    display: flex;
+    align-items: center;
+}
+
+.botao-cupom {
+    background: none;
+    border: none;
+    padding: 0 20px;
+    font-weight: bold;
+    color: var(--primaria);
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.botao-grande {
+    background-color: var(--primaria);
+    color: var(--branco);
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.botao-grande:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(43, 61, 79, 0.3);
+}
+
+/* --- SEÇÃO NOSSA MISSÃO --- */
+.nossa-missao {
+    background-color: var(--branco);
+    border-radius: 50px;
+    margin: 60px 0;
+    padding: 80px 0;
+}
+
+.conteudo-missao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .conteudo-missao {
+        grid-template-columns: 1fr;
+    }
+}
+
+.moldura-imagem-missao {
+    position: relative;
+}
+
+.fundo-imagem-missao {
+    position: absolute;
+    inset: -15px;
+    background-color: #f1f5f9;
+    border-radius: 40px;
+    transform: rotate(3deg);
+}
+
+.imagem-missao {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.texto-missao {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.etiqueta-missao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--primaria);
+}
+
+.etiqueta-missao span {
+    width: 30px;
+    height: 1px;
+    background-color: var(--primaria);
+}
+
+.texto-missao h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primaria);
+}
+
+.texto-missao p {
+    color: var(--texto-suave);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.estatisticas-missao {
+    display: flex;
+    gap: 40px;
+}
+
+.item-estatistica span {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primaria);
+}
+
+.item-estatistica p {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+}
+
+.saiba-mais {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primaria);
+    font-weight: bold;
+    text-decoration: none;
+    transition: gap 0.3s;
+}
+
+.saiba-mais:hover {
+    gap: 15px;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: var(--primaria);
+    color: #94a3b8;
+    padding: 80px 0 40px;
+}
+
+.grade-rodape {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+    .grade-rodape {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .grade-rodape {
+        grid-template-columns: 1fr;
+    }
+}
+
+.informacao-rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.logotipo-rodape {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.logotipo-rodape-icone {
+    background-color: var(--branco);
+    color: var(--primaria);
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.descricao-rodape {
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.links-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.botao-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.botao-social:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.coluna-rodape h4 {
+    color: var(--branco);
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.coluna-rodape ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coluna-rodape a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+
+.coluna-rodape a:hover {
+    color: var(--branco);
+}
+
+.lista-contato li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.875rem;
+}
+
+.lista-contato .material-symbols-outlined {
+    font-size: 1.25rem;
+    color: #475569;
+}
+
+.rodape-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .rodape-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.item-rodape-inferior {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-rodape-inferior span {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #475569;
+}
+
+.icones-pagamento {
+    display: flex;
+    gap: 10px;
+}
+
+.selo-pagamento {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.icones-seguranca {
+    display: flex;
+    gap: 15px;
+}
+
+.direitos-autorais {
+    font-size: 0.75rem;
+    color: #475569;
+}
